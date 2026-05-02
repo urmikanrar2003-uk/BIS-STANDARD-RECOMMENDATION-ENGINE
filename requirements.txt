@@ -1,0 +1,21 @@
+
+
+# PDF Parsing
+PyMuPDF>=1.23.0
+
+# Embeddings
+sentence-transformers>=2.7.0
+
+# Vector Store
+faiss-cpu>=1.7.4
+
+# Keyword / Sparse Search
+rank-bm25>=0.2.2
+
+# LLM Provider
+openai>=1.30.0
+
+# Utilities
+python-dotenv>=1.0.0
+numpy>=1.24.0
+tqdm>=4.66.0
