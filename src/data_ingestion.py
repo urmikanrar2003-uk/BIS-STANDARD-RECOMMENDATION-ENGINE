@@ -20,7 +20,7 @@ from config import PDF_PATH, STANDARDS_JSON
 #   IS 1489 (Part 2) : 1991
 #   IS 9142 : 1979
 IS_PATTERN = re.compile(
-    r"IS\s+\d+\s*(?:\(\s*(?:Part|Pt\.?)\s*\d+\s*\))?\s*(?:\([^)]{1,30}\))?\s*:\s*\d{4}",
+    r"IS(?:\s|\n|\r)+\d+(?:\s|\n|\r)*(?:\(\s*(?:Part|Pt\.?)\s*\d+\s*\))?(?:\s|\n|\r)*[:\-(\s]*(?:\s|\n|\r)*\d{4}\)?",
     re.IGNORECASE,
 )
 
@@ -126,7 +126,7 @@ def ingest(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(standards, f, indent=2, ensure_ascii=False)
-    print(f"  ✅ Saved {len(standards)} standards → {output_path}")
+    print(f"  Saved {len(standards)} standards -> {output_path}")
 
     return standards
 
