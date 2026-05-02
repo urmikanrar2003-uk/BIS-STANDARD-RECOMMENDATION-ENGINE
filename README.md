@@ -187,7 +187,7 @@ print(f'Latency: {r[\"latency_seconds\"]}s')
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+
 
 ##  APP Link:
 https://bis-standard-recommendation-engine-gybzddvzi4rrezbzbpcdak.streamlit.app/
