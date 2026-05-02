@@ -7,7 +7,9 @@
 
 ## Problem Statement
 
-Indian Micro and Small Enterprises (MSEs) often spend **weeks** identifying which BIS regulations apply to their products. This engine uses **Retrieval-Augmented Generation (RAG)** to return the top 3–5 relevant BIS standards from a plain-English product description in **under 5 seconds**.
+Indian Micro and Small Enterprises (MSEs) often spend **weeks** identifying which BIS regulations apply to their products. This engine uses **Retrieval-Augmented Generation (RAG)** to return the top 3–5 relevant BIS standards from a plain-English product description in **under 5 seconds**
+(Bureau of Indian Standards x Sigma Squad AI Hackathon
+Indian Institute of Technology (IIT), Tirupati).
 
 ---
 
