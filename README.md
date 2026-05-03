@@ -132,7 +132,7 @@ All configuration lives in `src/config.py` and `.env`:
 |--------|---------|--------|---------|
 | **Hit Rate @3** | ≥1 expected standard in top-3 / total × 100 | >80% | **100%** |
 | **MRR @5** | Mean Reciprocal Rank of first correct in top-5 | >0.70 | **1.0000** |
-| **Avg Latency** | Total time / num queries | <5 sec | **2.99s** |
+| **Avg Latency** | Total time / num queries | <5 sec | **2.96s** |
 
 ---
 
