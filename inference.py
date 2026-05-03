@@ -31,12 +31,7 @@ from pipeline import recommend  # noqa: E402 (after sys.path modification)
 
 
 # ── Banner ─────────────────────────────────────────────────────────────────────
-_BANNER = """
-╔══════════════════════════════════════════════════════════╗
-║        BIS Standard Recommendation Engine               ║
-║        AI-powered RAG · Retriever → LLM → Output        ║
-╚══════════════════════════════════════════════════════════╝
-"""
+_BANNER = "BIS Standard Recommendation Engine - Inference"
 
 
 def run_inference(input_path: str, output_path: str) -> None:

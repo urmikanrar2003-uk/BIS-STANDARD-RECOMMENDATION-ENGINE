@@ -26,7 +26,7 @@ RESULTS_DIR    = DATA_DIR / "results"
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 # ── Retrieval ──────────────────────────────────────────────────────────────────
-TOP_K_RETRIEVE = 10   # candidates pulled before LLM reranking
+TOP_K_RETRIEVE = 20   # candidates pulled before LLM reranking
 TOP_K_FINAL    = 5    # final recommendations returned
 
 # ── LLM ───────────────────────────────────────────────────────────────────────
