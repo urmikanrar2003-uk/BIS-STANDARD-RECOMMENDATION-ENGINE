@@ -156,11 +156,6 @@ All configuration lives in `src/config.py`:
 
 ---
 
-## License
-
-MIT
-
----
 
 ## APP Link:
-https://bis-standard-recommendation-engine.streamlit.app/
+https://bis-standard-recommendation-engine-gybzddvzi4rrezbzbpcdak.streamlit.app/
