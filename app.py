@@ -253,12 +253,19 @@ with col_main:
     )
     search_clicked = st.button("🔍 Find BIS Standards", key="search_btn")
 
+def set_query(ex_text):
+    st.session_state["query_box"] = ex_text
+
 with col_right:
     st.markdown("#### 💡 Try an example")
     for ex in EXAMPLES:
-        if st.button(ex[:55] + "…", key=f"ex_{ex[:20]}", help=ex):
-            st.session_state["query_box"] = ex
-            st.rerun()
+        st.button(
+            ex[:55] + "…", 
+            key=f"ex_{ex[:20]}", 
+            help=ex, 
+            on_click=set_query, 
+            args=(ex,)
+        )
 
 st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 
