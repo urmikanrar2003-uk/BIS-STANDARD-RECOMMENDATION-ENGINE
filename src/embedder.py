@@ -77,7 +77,7 @@ def build_index(
     with open(index_dir / "chunks.pkl", "wb") as f:
         pickle.dump(chunks, f)
 
-    print(f"\n✅ Index saved → {index_dir}/")
+    print(f"\nDONE! Index saved -> {index_dir}/")
     print(f"   Files: standards.index | metadata.pkl | chunks.pkl")
 
 

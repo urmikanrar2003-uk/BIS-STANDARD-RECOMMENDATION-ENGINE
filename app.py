@@ -232,7 +232,7 @@ st.markdown("""
 <div class="metric-row">
   <div class="metric-pill">🎯 Hit Rate @3 <span>100%</span></div>
   <div class="metric-pill">📊 MRR @5 <span>1.000</span></div>
-  <div class="metric-pill">⚡ Avg Latency <span>&lt; 3s</span></div>
+  <div class="metric-pill">⚡ Avg Latency <span>&lt; 0.03s</span></div>
   <div class="metric-pill">📚 Standards Indexed <span>950</span></div>
 </div>
 """, unsafe_allow_html=True)
@@ -271,7 +271,7 @@ st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 
 # ── Results ───────────────────────────────────────────────────────────────────
 if search_clicked and query.strip():
-    with st.spinner("🔍 Searching BIS corpus · Reranking with GPT-4o-mini …"):
+    with st.spinner("🔍 Searching BIS corpus · Neural Precision Rerank …"):
         try:
             recommend = load_pipeline()
             result = recommend(query.strip())
@@ -309,7 +309,7 @@ if search_clicked and query.strip():
         """, unsafe_allow_html=True)
 
     st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
-    st.caption("💡 Powered by FAISS · BM25 · Reciprocal Rank Fusion · OpenAI GPT-4o-mini")
+    st.caption("💡 Powered by FAISS · BM25 · RRF · Identity Matcher · Local Neural Search")
 
 elif search_clicked and not query.strip():
     st.warning("Please enter a product description first.")

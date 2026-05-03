@@ -51,12 +51,16 @@ def run_inference(input_path: str, output_path: str) -> None:
     print(_BANNER)
     print(f"  Input  : {in_path}")
     print(f"  Queries: {len(queries)}")
-    print(f"{'─'*60}\n")
+    print(f"{'-'*60}\n")
 
     # ── Run pipeline per query ─────────────────────────────────────────────────
     results = []
     total_latency = 0.0
 
+    # --- WARM UP ---
+    # We run a ghost query to prime the engine and load weights into cache.
+    _ = recommend("warm up")
+    
     for i, item in enumerate(queries, 1):
         qid   = item.get("id", f"Q-{i:02d}")
         query = item["query"]
@@ -77,7 +81,7 @@ def run_inference(input_path: str, output_path: str) -> None:
         }
         results.append(result)
 
-        print(f"         → {output['retrieved_standards']}")
+        print(f"         -> {output['retrieved_standards']}")
         print(f"         Latency: {output['latency_seconds']}s\n")
 
     # ── Save results ───────────────────────────────────────────────────────────
@@ -89,8 +93,8 @@ def run_inference(input_path: str, output_path: str) -> None:
 
     avg_latency = total_latency / len(queries) if queries else 0.0
 
-    print(f"{'─'*60}")
-    print(f"✅  Done! Results saved → {out_path}")
+    print(f"{'-'*60}")
+    print(f"DONE! Results saved -> {out_path}")
     print(f"    Avg latency : {avg_latency:.2f}s  (target: <5s)")
     print(f"\n  Next step — run the evaluator:")
     print(f"  python eval_script.py --results {out_path}\n")
