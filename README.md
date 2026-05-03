@@ -106,7 +106,7 @@ python eval_script.py --results data/results/output.json
 Total Queries Evaluated : 10
 Hit Rate @3             : 100.00%  (Target: >80%)
 MRR @5                  : 1.0000   (Target: >0.7)
-Avg Latency             : 2.99 sec (Target: <5 seconds)
+Avg Latency             : 2.96 sec (Target: <5 seconds)
 ========================================
 ```
 
